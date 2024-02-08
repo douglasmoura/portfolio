@@ -515,7 +515,7 @@ body {
 
 /* About */
 #about{
-    height: auto;
+    height: 100%;
     width: 100%;
     background: var(--color-background);
 
@@ -524,12 +524,20 @@ body {
 }
 
 .background-about{
+    height: 100vh;
     width: 50%;
-    height: 100%;
 
     display: flex;
     justify-content: center;
     align-items: center;
+
+    position: relative;
+    flex-direction: column;
+
+    background-image: url(./img/img.2.jpg);
+    background-size: cover;
+    background-position: center;
+
 }
 
 .img-wrapper{
@@ -666,6 +674,11 @@ body {
     .box-about h4 {
     margin: 1rem;
     }
+
+    .img-wrapper{  
+        margin: 0rem;
+    }
+    
 
 }
 
