@@ -100,8 +100,8 @@ body {
         display: flex;
         flex-direction: column;
 
-        width: 50%;
-        height: 100vh;
+        width: 40%;
+        height: 50vh;
 
         position: fixed;
         right: 0;
@@ -441,7 +441,10 @@ body {
     linear-gradient(0deg, transparent 50%, var(--color-background))
 }
 
-.wrapper-profile-photo{
+.wrapper-profile-photo img{
+
+    max-width: 380px;
+    width: 100%;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -452,17 +455,12 @@ body {
     border-radius: 50%;
 
     background: 
-    radial-gradient(rgba(0,0,0,0.15), 67%, transparent 0),
-    radial-gradient(rgb(27, 2, 44), 68%, transparent 0),
+    radial-gradient(rgba(0,0,0,0.15), 70%, transparent 0),
+    radial-gradient(rgb(27, 2, 44), 67%, transparent 0),
     linear-gradient(to top right, rgb(25, 4, 39) 0%, rgb(173, 2, 252) 100%);
 
 }
 
-.profile-photo{
-    max-width: 280px;
-    width: 100%;
-    border-radius: 50%;
-}
 
 .links a img{
     width: calc(2vw + 0.8rem);
@@ -500,15 +498,17 @@ body {
 
 
 @media (max-width: 1440px) and (orientation: landscape) {
-    .profile-photo {
-    width: 45vh;
+    .wrapper-profile-photo img{
+    width: 30vh;
+
     }
 }
 
 @media (min-width: 1440px) {
-    .profile-photo {
+    .wrapper-profile-photo img{
     width: 25vw;
     max-width: initial;
+    
     }
 }
 /* End Person */
@@ -633,7 +633,7 @@ body {
     font-family: 'Poppins', sans-serif;
     font-weight: 700;
     letter-spacing: .15rem;
-    
+
     color: var(--color-background);
     background: var(--color-white);
     text-align: center;
@@ -1116,6 +1116,8 @@ body {
     font-size: .8vw;
     }
 }
+
+/* End Footer */
 
 @keyframes written_text { 
     100%{
