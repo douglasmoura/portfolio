@@ -443,14 +443,13 @@ body {
 
 .wrapper-profile-photo img{
 
-    max-width: 380px;
+    max-width: 220px;
     width: 100%;
     display: flex;
     justify-content: center;
     align-items: center;
     
     padding: calc(1vw + 0.2rem);
-    margin: 20px 15px;
 
     border-radius: 50%;
 
