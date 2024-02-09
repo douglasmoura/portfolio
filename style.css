@@ -101,15 +101,17 @@ body {
         flex-direction: column;
 
         width: 40%;
-        height: 50vh;
+        height: 30vh;
 
         position: fixed;
         right: 0;
         top: 0;
         background: var(--color-purple);
-        clip-path: circle(100px at 90% -20%); 
+        
+        clip-path: circle(100px at 90% -50%);
         pointer-events: none;
         transition: .6s ease-out;
+
     }
     .menu-hamburguer {
         display: block;
