@@ -1,0 +1,514 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="Content-Language" content="pt-BR" />
+  <meta name="language" content="pt-BR" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Currículo — Douglas Moura</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+  <style>
+    /* ── Reset ── */
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    /* ── Variables ── */
+    :root {
+      --accent:     #6c63ff;
+      --accent-dk:  #4b43cc;
+      --text:       #1a1a2e;
+      --muted:      #555566;
+      --border:     #dde0ee;
+      --bg:         #f4f5fb;
+      --white:      #ffffff;
+      --sidebar:    #1a1a2e;
+      --sidebar-2:  #24244a;
+      --tag-bg:     #ebe9ff;
+      --tag-color:  #4b43cc;
+      font-size: 14px;
+    }
+
+    /* ── Base ── */
+    body {
+      font-family: 'Inter', sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      line-height: 1.6;
+      -webkit-print-color-adjust: exact;
+      print-color-adjust: exact;
+    }
+
+    /* ── Page wrapper ── */
+    .page {
+      max-width: 900px;
+      margin: 2rem auto;
+      background: var(--white);
+      box-shadow: 0 4px 32px rgba(108,99,255,.12);
+      border-radius: 12px;
+      overflow: hidden;
+      display: grid;
+      grid-template-columns: 260px 1fr;
+    }
+
+    /* ═══════════════════════════════
+       SIDEBAR (left column)
+    ═══════════════════════════════ */
+    .sidebar {
+      background: var(--sidebar);
+      color: #e8e8f4;
+      padding: 2.4rem 1.6rem;
+      display: flex;
+      flex-direction: column;
+      gap: 2rem;
+    }
+
+    /* Avatar */
+    .avatar-wrap {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+      gap: .8rem;
+    }
+    .avatar {
+      width: 110px;
+      height: 110px;
+      border-radius: 50%;
+      object-fit: cover;
+      border: 3px solid var(--accent);
+      background: var(--sidebar-2);
+    }
+    .name {
+      font-size: 1.25rem;
+      font-weight: 700;
+      color: #fff;
+      line-height: 1.3;
+    }
+    .role {
+      font-size: .82rem;
+      font-weight: 500;
+      letter-spacing: .06em;
+      text-transform: uppercase;
+      color: var(--accent);
+      background: rgba(108,99,255,.18);
+      padding: .2rem .7rem;
+      border-radius: 20px;
+      display: inline-block;
+    }
+
+    /* Sidebar sections */
+    .s-section { display: flex; flex-direction: column; gap: .6rem; }
+    .s-title {
+      font-size: .65rem;
+      font-weight: 700;
+      letter-spacing: .12em;
+      text-transform: uppercase;
+      color: var(--accent);
+      border-bottom: 1px solid rgba(108,99,255,.35);
+      padding-bottom: .35rem;
+      margin-bottom: .2rem;
+    }
+
+    /* Contact items */
+    .contact-item {
+      display: flex;
+      align-items: flex-start;
+      gap: .5rem;
+      font-size: .8rem;
+      color: #c8c8e0;
+      word-break: break-word;
+    }
+    .contact-item svg { flex-shrink: 0; margin-top: 2px; opacity: .8; }
+    .contact-item a { color: #c8c8e0; text-decoration: none; }
+    .contact-item a:hover { color: var(--accent); }
+
+    /* Skills bar */
+    .skill-item { display: flex; flex-direction: column; gap: .25rem; }
+    .skill-label {
+      display: flex;
+      justify-content: space-between;
+      font-size: .78rem;
+      color: #c8c8e0;
+    }
+    .skill-bar {
+      height: 5px;
+      background: rgba(255,255,255,.1);
+      border-radius: 3px;
+      overflow: hidden;
+    }
+    .skill-fill {
+      height: 100%;
+      background: var(--accent);
+      border-radius: 3px;
+    }
+
+    /* Lang pills */
+    .lang-item {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      font-size: .8rem;
+      color: #c8c8e0;
+    }
+    .lang-level {
+      font-size: .7rem;
+      background: rgba(108,99,255,.25);
+      color: #a8a0ff;
+      padding: .1rem .5rem;
+      border-radius: 10px;
+    }
+
+    /* ═══════════════════════════════
+       MAIN (right column)
+    ═══════════════════════════════ */
+    .main {
+      padding: 2.4rem 2rem;
+      display: flex;
+      flex-direction: column;
+      gap: 1.8rem;
+    }
+
+    /* Section titles */
+    .m-section { display: flex; flex-direction: column; gap: .85rem; }
+    .m-title {
+      font-size: .68rem;
+      font-weight: 700;
+      letter-spacing: .12em;
+      text-transform: uppercase;
+      color: var(--accent);
+      display: flex;
+      align-items: center;
+      gap: .5rem;
+    }
+    .m-title::after {
+      content: '';
+      flex: 1;
+      height: 1px;
+      background: var(--border);
+    }
+
+    /* Summary */
+    .summary-text {
+      font-size: .88rem;
+      color: var(--muted);
+      line-height: 1.75;
+    }
+
+    /* Experience / Education card */
+    .card { display: flex; flex-direction: column; gap: .3rem; }
+    .card-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+      gap: .5rem;
+    }
+    .card-title { font-size: .95rem; font-weight: 600; color: var(--text); }
+    .card-company { font-size: .82rem; font-weight: 500; color: var(--accent); }
+    .card-date {
+      font-size: .72rem;
+      color: var(--muted);
+      white-space: nowrap;
+      flex-shrink: 0;
+    }
+    .card-desc {
+      font-size: .83rem;
+      color: var(--muted);
+      line-height: 1.65;
+    }
+    .card-desc ul { padding-left: 1.2rem; }
+    .card-desc li { margin-bottom: .2rem; }
+
+    /* Tags */
+    .tags { display: flex; flex-wrap: wrap; gap: .35rem; margin-top: .3rem; }
+    .tag {
+      font-size: .7rem;
+      font-weight: 500;
+      background: var(--tag-bg);
+      color: var(--tag-color);
+      padding: .15rem .55rem;
+      border-radius: 20px;
+    }
+
+    /* Divider between cards */
+    .card + .card { padding-top: .85rem; border-top: 1px dashed var(--border); }
+
+    /* Print button */
+    .print-btn {
+      position: fixed;
+      bottom: 1.5rem;
+      right: 1.5rem;
+      background: var(--accent);
+      color: #fff;
+      border: none;
+      padding: .65rem 1.2rem;
+      border-radius: 30px;
+      font-family: inherit;
+      font-size: .82rem;
+      font-weight: 600;
+      cursor: pointer;
+      box-shadow: 0 4px 16px rgba(108,99,255,.4);
+      display: flex;
+      align-items: center;
+      gap: .4rem;
+      transition: background .2s;
+      z-index: 100;
+    }
+    .print-btn:hover { background: var(--accent-dk); }
+
+    /* ── Print styles ── */
+    @media print {
+      body { background: #fff; }
+      .page {
+        margin: 0;
+        box-shadow: none;
+        border-radius: 0;
+        max-width: 100%;
+      }
+      .print-btn { display: none; }
+    }
+
+    /* ── Responsive (screen only, for narrow viewports) ── */
+    @media screen and (max-width: 640px) {
+      .page {
+        grid-template-columns: 1fr;
+        margin: 0;
+        border-radius: 0;
+      }
+      .sidebar { padding: 2rem 1.4rem; }
+      .main { padding: 1.8rem 1.4rem; }
+    }
+  </style>
+</head>
+<body>
+
+  <div class="page">
+
+    <!-- ════ SIDEBAR ════ -->
+    <aside class="sidebar">
+
+      <!-- Avatar + name -->
+      <div class="avatar-wrap">
+        <img
+          class="avatar"
+          src="../../img/photo-profile.jpg"
+          alt="Foto de Douglas Moura"
+          onerror="this.style.display='none'"
+        />
+        <div class="name">Douglas Moura</div>
+        <span class="role">Full Stack Developer</span>
+      </div>
+
+      <!-- Contato -->
+      <div class="s-section">
+        <div class="s-title">Contato</div>
+
+        <div class="contact-item">
+          <!-- email -->
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="M2 7l10 7 10-7"/></svg>
+          <a href="mailto:douglasmoura2@outlook.com">douglasmoura2@outlook.com</a>
+        </div>
+
+        <div class="contact-item">
+          <!-- location -->
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7z"/><circle cx="12" cy="9" r="2.5"/></svg>
+          Rio de Janeiro, RJ — Brasil
+        </div>
+
+        <div class="contact-item">
+          <!-- linkedin -->
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M16 8a6 6 0 016 6v7h-4v-7a2 2 0 00-2-2 2 2 0 00-2 2v7h-4v-7a6 6 0 016-6zM2 9h4v12H2zm2-4a2 2 0 100-4 2 2 0 000 4z"/></svg>
+          <a href="https://linkedin.com/in/douglasmourarj" target="_blank">/in/douglasmourarj</a>
+        </div>
+
+        <div class="contact-item">
+          <!-- github -->
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C6.48 2 2 6.48 2 12c0 4.42 2.87 8.17 6.84 9.49.5.09.68-.22.68-.48 0-.24-.01-.87-.01-1.71-2.78.6-3.37-1.34-3.37-1.34-.45-1.16-1.11-1.47-1.11-1.47-.91-.62.07-.61.07-.61 1.01.07 1.54 1.04 1.54 1.04.89 1.53 2.34 1.09 2.91.83.09-.65.35-1.09.63-1.34-2.22-.25-4.56-1.11-4.56-4.94 0-1.09.39-1.98 1.03-2.68-.1-.25-.45-1.27.1-2.65 0 0 .84-.27 2.75 1.02A9.56 9.56 0 0112 6.8c.85.004 1.7.115 2.5.337 1.91-1.29 2.75-1.02 2.75-1.02.55 1.38.2 2.4.1 2.65.64.7 1.03 1.59 1.03 2.68 0 3.84-2.34 4.69-4.57 4.93.36.31.68.92.68 1.85 0 1.34-.01 2.41-.01 2.74 0 .27.18.58.69.48A10.01 10.01 0 0022 12c0-5.52-4.48-10-10-10z"/></svg>
+          <a href="https://github.com/douglasmoura" target="_blank">@douglasmoura</a>
+        </div>
+
+        <div class="contact-item">
+          <!-- portfolio -->
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 014 10 15.3 15.3 0 01-4 10 15.3 15.3 0 01-4-10 15.3 15.3 0 014-10z"/></svg>
+          <a href="https://douglasmoura.github.io/portfolio" target="_blank">Portfólio</a>
+        </div>
+      </div>
+
+      <!-- Habilidades técnicas -->
+      <div class="s-section">
+        <div class="s-title">Habilidades</div>
+
+        <div class="skill-item">
+          <div class="skill-label"><span>TypeScript / JavaScript</span><span>90%</span></div>
+          <div class="skill-bar"><div class="skill-fill" style="width:90%"></div></div>
+        </div>
+        <div class="skill-item">
+          <div class="skill-label"><span>React</span><span>85%</span></div>
+          <div class="skill-bar"><div class="skill-fill" style="width:85%"></div></div>
+        </div>
+        <div class="skill-item">
+          <div class="skill-label"><span>Node.js</span><span>82%</span></div>
+          <div class="skill-bar"><div class="skill-fill" style="width:82%"></div></div>
+        </div>
+        <div class="skill-item">
+          <div class="skill-label"><span>Java / Spring Boot</span><span>78%</span></div>
+          <div class="skill-bar"><div class="skill-fill" style="width:78%"></div></div>
+        </div>
+        <div class="skill-item">
+          <div class="skill-label"><span>C#</span><span>75%</span></div>
+          <div class="skill-bar"><div class="skill-fill" style="width:75%"></div></div>
+        </div>
+        <div class="skill-item">
+          <div class="skill-label"><span>HTML5 / CSS3</span><span>92%</span></div>
+          <div class="skill-bar"><div class="skill-fill" style="width:92%"></div></div>
+        </div>
+      </div>
+
+      <!-- Idiomas -->
+      <div class="s-section">
+        <div class="s-title">Idiomas</div>
+        <div class="lang-item">
+          <span>Português</span>
+          <span class="lang-level">Nativo</span>
+        </div>
+        <div class="lang-item">
+          <span>Inglês</span>
+          <span class="lang-level">Básico</span>
+        </div>
+      </div>
+
+    </aside><!-- /sidebar -->
+
+    <!-- ════ MAIN ════ -->
+    <main class="main">
+
+      <!-- Resumo profissional -->
+      <div class="m-section">
+        <div class="m-title">Perfil Profissional</div>
+        <p class="summary-text">
+          Desenvolvedor Full Stack com experiência no desenvolvimento de aplicações web modernas,
+          tanto no lado do cliente quanto no servidor. Habilidade em criar interfaces responsivas
+          e acessíveis com React, além de construir APIs RESTful robustas com Node.js, Java Spring
+          Boot e C#. Apaixonado por código limpo, boas práticas e entrega de valor real ao usuário final.
+        </p>
+      </div>
+
+      <!-- Experiência -->
+      <div class="m-section">
+        <div class="m-title">Experiência</div>
+
+        <div class="card">
+          <div class="card-header">
+            <div>
+              <div class="card-title">Desenvolvedor Full Stack</div>
+            </div>
+          </div>
+          <div class="card-desc">
+            <ul>
+              <li>Desenvolvimento de aplicações web completas com React, Node.js e Java Spring Boot.</li>
+              <li>Implementação de interfaces responsivas e acessíveis.</li>
+              <li>Versionamento de código com Git e GitHub.</li>
+            </ul>
+          </div>
+          <div class="tags">
+            <span class="tag">React</span>
+            <span class="tag">Node.js</span>
+            <span class="tag">TypeScript</span>
+            <span class="tag">Java Spring</span>
+            <span class="tag">REST API</span>
+            <span class="tag">Git</span>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- Projetos em destaque -->
+      <div class="m-section">
+        <div class="m-title">Projetos em Destaque</div>
+
+        <div class="card">
+          <div class="card-header">
+            <div>
+              <div class="card-title">DS Delivery</div>
+              <div class="card-company">Aplicação Full Stack de Delivery</div>
+            </div>
+          </div>
+          <div class="card-desc">
+            Sistema completo de pedidos e entrega. Back-end em Java com Spring Boot e banco de dados
+            PostgreSQL. Front-end em React com integração a APIs REST e mapa de geolocalização.
+          </div>
+          <div class="tags">
+            <span class="tag">Java</span>
+            <span class="tag">Spring Boot</span>
+            <span class="tag">React</span>
+            <span class="tag">PostgreSQL</span>
+          </div>
+        </div>
+
+        <div class="card">
+          <div class="card-header">
+            <div>
+              <div class="card-title">DS Vendas</div>
+              <div class="card-company">Dashboard de Análise de Vendas</div>
+            </div>
+          </div>
+          <div class="card-desc">
+            Dashboard interativo com gráficos e indicadores de performance de vendas.
+            Construído com React, TypeScript e integração com back-end Spring Boot.
+          </div>
+          <div class="tags">
+            <span class="tag">React</span>
+            <span class="tag">TypeScript</span>
+            <span class="tag">Spring Boot</span>
+            <span class="tag">Recharts</span>
+          </div>
+        </div>
+
+        <div class="card">
+          <div class="card-header">
+            <div>
+              <div class="card-title">DS Movie</div>
+              <div class="card-company">Catálogo e Avaliação de Filmes</div>
+            </div>
+          </div>
+          <div class="card-desc">
+            Plataforma de avaliação de filmes com autenticação de usuários, listagem de filmes
+            e sistema de pontuação. Back-end Spring Security, front-end React.
+          </div>
+          <div class="tags">
+            <span class="tag">Java</span>
+            <span class="tag">Spring Security</span>
+            <span class="tag">React</span>
+            <span class="tag">JWT</span>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- Formação -->
+      <div class="m-section">
+        <div class="m-title">Formação</div>
+
+        <div class="card">
+          <div class="card-header">
+            <div>
+              <div class="card-title">Análise e Desenvolvimento de Sistemas</div>
+              <div class="card-company">Universidade Unicarioca</div>
+            </div>
+            <div class="card-date">Concluido</div>
+          </div>
+        </div>
+      </div>
+
+    </main><!-- /main -->
+
+  </div><!-- /page -->
+
+  <!-- Botão de impressão/PDF -->
+  <button class="print-btn" onclick="window.print()">
+    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 6 2 18 2 18 9"/><path d="M6 18H4a2 2 0 01-2-2v-5a2 2 0 012-2h16a2 2 0 012 2v5a2 2 0 01-2 2h-2"/><rect x="6" y="14" width="12" height="8"/></svg>
+    Salvar como PDF
+  </button>
+
+</body>
+</html>
