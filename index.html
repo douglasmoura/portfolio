@@ -1,0 +1,521 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+    <title>Douglas Moura | Desenvolvedor Full Stack</title>
+    <meta name="description" content="Portfólio de Douglas Moura - Desenvolvedor Full Stack especializado em C#, Java, TypeScript, JavaScript, React e Node.js. Conheça meus projetos e habilidades.">
+    <meta name="author" content="Douglas Moura">
+    <meta name="keywords" content="Douglas Moura, Desenvolvedor Full Stack, C#, Java, TypeScript, JavaScript, React, Node.js, Web Developer, Portfolio">
+    <meta name="theme-color" content="#120422">
+
+    <!-- Open Graph / Redes Sociais -->
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Douglas Moura | Desenvolvedor Full Stack">
+    <meta property="og:description" content="Portfólio profissional de Douglas Moura - Projetos, tecnologias e trajetória na programação.">
+    <meta property="og:image" content="./img/DouglasIAJPG.JPG">
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/x-icon" href="ico/portifolio.ico">
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;600&display=swap" rel="stylesheet">
+
+    <!-- Font Awesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" 
+    integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" 
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <!-- Swiper CSS (v11) -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+
+    <!-- CSS Customizado -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Skip to Content Accessibility Link -->
+    <a href="#main" class="skip-link">Pular para o conteúdo principal</a>
+
+    <!-- Header / Navbar -->
+    <header class="header" id="header">
+        <div class="header-container">
+            <a class="header-logo" href="#person" aria-label="Ir para o início">
+                <span class="logo-code">&lt;</span>douglasmoura<span class="logo-accent">.dev</span><span class="logo-code">/&gt;</span>
+            </a>
+
+            <nav class="navbar" id="navbar" aria-label="Navegação Principal">
+                <button class="menu-hamburguer" id="menu-hamburguer" aria-label="Abrir menu de navegação" aria-expanded="false" aria-controls="navbar-links">
+                    <span class="hamburger-bar"></span>
+                    <span class="hamburger-bar"></span>
+                    <span class="hamburger-bar"></span>
+                </button>
+
+                <div class="navbar-backdrop" id="navbar-backdrop"></div>
+
+                <ul class="navbar-links" id="navbar-links" role="menu">
+                    <li role="none"><a href="#person" class="nav-link active" role="menuitem">Home</a></li>
+                    <li role="none"><a href="#about" class="nav-link" role="menuitem">Sobre</a></li>
+                    <li role="none"><a href="#projects" class="nav-link" role="menuitem">Projetos</a></li>
+                    <li role="none"><a href="#contacts" class="nav-link" role="menuitem">Contatos</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main id="main">
+        <!-- Hero / Person Section -->
+        <section id="person" class="hero-section">
+            <div class="hero-bg-glow" aria-hidden="true"></div>
+            <div class="hero-container">
+                <div class="person-content">
+                    <div class="status-badge">
+                        <span class="status-dot"></span>
+                        <span>Disponível para novas oportunidades</span>
+                    </div>
+
+                    <div class="person-name">
+                        <h1 class="hero-title">
+                            Olá, me chamo <br>
+                            <span class="name-highlight">Douglas Moura</span>
+                        </h1>
+                        <h2 class="hero-subtitle">
+                            Desenvolvedor <span class="role-highlight">Full Stack</span>
+                        </h2>
+                        <p class="hero-summary">
+                            Construindo aplicações modernas, robustas e escaláveis, unindo o melhor da arquitetura back-end com interfaces front-end elegantes e intuitivas.
+                        </p>
+                    </div>
+
+                    <div class="hero-actions">
+                        <a href="#projects" class="btn btn-primary">
+                            <i class="fa-solid fa-code"></i> Ver Projetos
+                        </a>
+                        <a href="public/document/Curriculo-Douglas.pdf" download="Curriculo-Douglas-Moura.pdf" class="btn btn-secondary">
+                            <i class="fa-solid fa-file-arrow-down"></i> Currículo
+                        </a>
+                    </div>
+
+                    <div class="stacks-content">
+                        <h3 class="stacks-title">
+                            <i class="fa-solid fa-layer-group"></i> Conhecimentos & Tecnologias
+                        </h3>
+
+                        <ul class="stacks" aria-label="Tecnologias dominadas">
+                            <li class="stack-item" data-tooltip="C#">
+                                <img src="./svg/csharp.svg" alt="Ícone C#" width="28" height="28" loading="lazy">
+                                <span>C#</span>
+                            </li>
+                            <li class="stack-item" data-tooltip="Java">
+                                <img src="./svg/java.svg" alt="Ícone Java" width="28" height="28" loading="lazy">
+                                <span>Java</span>
+                            </li>
+                            <li class="stack-item" data-tooltip="TypeScript">
+                                <img src="./svg/ts.svg" alt="Ícone TypeScript" width="28" height="28" loading="lazy">
+                                <span>TypeScript</span>
+                            </li>
+                            <li class="stack-item" data-tooltip="JavaScript">
+                                <img src="./svg/js.svg" alt="Ícone JavaScript" width="28" height="28" loading="lazy">
+                                <span>JavaScript</span>
+                            </li>
+                            <li class="stack-item" data-tooltip="HTML5">
+                                <img src="./svg/html.svg" alt="Ícone HTML5" width="28" height="28" loading="lazy">
+                                <span>HTML5</span>
+                            </li>
+                            <li class="stack-item" data-tooltip="CSS3">
+                                <img src="./svg/css.svg" alt="Ícone CSS3" width="28" height="28" loading="lazy">
+                                <span>CSS3</span>
+                            </li>
+                            <li class="stack-item" data-tooltip="React">
+                                <img src="./svg/react.svg" alt="Ícone React" width="28" height="28" loading="lazy">
+                                <span>React</span>
+                            </li>
+                            <li class="stack-item" data-tooltip="Node.js">
+                                <img src="./svg/node.svg" alt="Ícone Node.js" width="28" height="28" loading="lazy">
+                                <span>Node.js</span>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="person-background">
+                    <div class="profile-card">
+                        <div class="profile-photo-wrapper">
+                            <div class="profile-glow"></div>
+                            <img src="./img/DouglasIAJPG.JPG" alt="Foto de perfil de Douglas Moura" class="profile-photo" fetchpriority="high">
+                        </div>
+
+                        <div class="profile-info">
+                            <span class="profile-name">Douglas Moura</span>
+                            <span class="profile-tag">Full Stack Developer</span>
+                        </div>
+
+                        <div class="links" aria-label="Redes sociais e contatos">
+                            <a href="https://github.com/douglasmoura" target="_blank" rel="noopener noreferrer" aria-label="Acessar perfil do GitHub" class="social-btn">
+                                <img src="./svg/logo-github.svg" alt="GitHub" width="22" height="22">
+                                <span class="sr-only">GitHub</span>
+                            </a>
+                            <a href="https://www.linkedin.com/in/douglasmourarj/" target="_blank" rel="noopener noreferrer" aria-label="Acessar perfil do LinkedIn" class="social-btn">
+                                <img src="./svg/logo-linkedin.svg" alt="LinkedIn" width="22" height="22">
+                                <span class="sr-only">LinkedIn</span>
+                            </a>
+                            <a href="https://www.instagram.com/dougras2_/" target="_blank" rel="noopener noreferrer" aria-label="Acessar perfil do Instagram" class="social-btn">
+                                <img src="./svg/logo-insta.svg" alt="Instagram" width="22" height="22">
+                                <span class="sr-only">Instagram</span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- About Section -->
+        <section id="about" class="about-section">
+            <div class="section-container">
+                <div class="section-heading">
+                    <span class="section-badge">Trajetória</span>
+                    <h2 class="section-title">Sobre <span class="text-gradient">Mim</span></h2>
+                </div>
+
+                <div class="about-grid">
+                    <div class="background-about">
+                        <div class="img-wrapper">
+                            <img src="./img/img.2.jpg" alt="Setup de desenvolvimento com notebook" loading="lazy">
+                            <div class="img-overlay-card">
+                                <i class="fa-solid fa-laptop-code"></i>
+                                <div>
+                                    <strong>Foco Contínuo</strong>
+                                    <span>Back-end & Front-end</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="box-about">
+                        <div class="about-role-pill">
+                            <span class="pill-icon">💻</span>
+                            <span class="pill-text"><strong>Desenvolvedor</strong> Full Stack</span>
+                        </div>
+
+                        <h3 class="about-summary">
+                            Desenvolvedor com experiência em 
+                            <span class="tech-highlight">C#, Java, TypeScript, JavaScript, HTML5/CSS3, React e Node.js</span>.
+                        </h3>
+
+                        <div class="about-text-content">
+                            <p>
+                                Desde que me apaixonei pela área da tecnologia e programação, mantenho uma rotina diária de estudos e desenvolvimento prático de projetos. Busco constantemente aprender novas ferramentas e arquiteturas para entregar soluções cada vez mais eficientes.
+                            </p>
+                            <p>
+                                Atuo de ponta a ponta: do design e modelagem de regras de negócio no <strong>back-end</strong> (APIs RESTful, bancos de dados e lógica robusta) à construção de experiências dinâmicas, responsivas e amigáveis no <strong>front-end</strong>.
+                            </p>
+                            <p>
+                                Estou pronto para contribuir em times de alta performance e gerar valor real para produtos e usuários.
+                            </p>
+                        </div>
+
+                        <div class="about-features">
+                            <div class="feature-item">
+                                <i class="fa-solid fa-code-merge"></i>
+                                <div>
+                                    <strong>Clean Code</strong>
+                                    <span>Código limpo e sustentável</span>
+                                </div>
+                            </div>
+                            <div class="feature-item">
+                                <i class="fa-solid fa-mobile-screen-button"></i>
+                                <div>
+                                    <strong>Mobile First</strong>
+                                    <span>Design 100% responsivo</span>
+                                </div>
+                            </div>
+                            <div class="feature-item">
+                                <i class="fa-solid fa-rocket"></i>
+                                <div>
+                                    <strong>Evolução Ágil</strong>
+                                    <span>Aprendizado e entrega rápida</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="button-cta">
+                            <a href="public/document/Curriculo-Douglas.pdf" download="Curriculo-Douglas-Moura.pdf" class="btn btn-primary" aria-label="Baixar Currículo de Douglas Moura em PDF">
+                                <i class="fa-solid fa-file-pdf"></i> Baixar Currículo
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Projects Section -->
+        <section id="projects" class="projects-section">
+            <div class="section-container">
+                <div class="section-heading">
+                    <span class="section-badge">Portfólio</span>
+                    <h2 class="section-title">Meus <span class="text-gradient">Projetos</span></h2>
+                    <p class="section-subtitle">
+                        Conheça algumas das aplicações web que criei, desde jogos e conversores a dashboards e sistemas completos.
+                    </p>
+                </div>
+
+                <div class="container-projects">
+                    <div class="swiper mySwiper">
+                        <div class="swiper-wrapper">
+                            
+                            <!-- Projeto 1: Jogo da Velha -->
+                            <div class="swiper-slide">
+                                <article class="card-project">
+                                    <div class="image-project">
+                                        <img src="./img/Jogo-da-velha.jpg" alt="Screenshot do Jogo da Velha Web" loading="lazy">
+                                        <div class="project-overlay">
+                                            <a href="https://douglasmoura.github.io/AV1-Jogo_da_velha-WEB/" target="_blank" rel="noopener noreferrer" class="overlay-link" aria-label="Ver site do Jogo da Velha">
+                                                <i class="fa-solid fa-arrow-up-right-from-square"></i>
+                                            </a>
+                                        </div>
+                                    </div>
+
+                                    <div class="card-body">
+                                        <div class="card-tags">
+                                            <span class="tag">JavaScript</span>
+                                            <span class="tag">HTML5/CSS3</span>
+                                        </div>
+                                        <h3 class="card-title">Jogo da Velha</h3>
+                                        <p class="card-description">
+                                            Jogo clássico interativo com verificação de vitória em tempo real, placar e suporte a múltiplos rounds.
+                                        </p>
+                                    </div>
+
+                                    <div class="cta-project">
+                                        <a href="https://github.com/douglasmoura/AV1-Jogo_da_velha-WEB" target="_blank" rel="noopener noreferrer" class="btn-card btn-code">
+                                            <i class="fa-brands fa-github"></i> Código
+                                        </a>
+                                        <a href="https://douglasmoura.github.io/AV1-Jogo_da_velha-WEB/" target="_blank" rel="noopener noreferrer" class="btn-card btn-live">
+                                            <i class="fa-solid fa-arrow-up-right-from-square"></i> Site
+                                        </a>
+                                    </div>
+                                </article>
+                            </div>
+
+                            <!-- Projeto 2: Calculadora Romana -->
+                            <div class="swiper-slide">
+                                <article class="card-project">
+                                    <div class="image-project">
+                                        <img src="./img/calculadora-romana.jpg" alt="Screenshot da Calculadora Romana" loading="lazy">
+                                        <div class="project-overlay">
+                                            <a href="https://douglasmoura.github.io/APS-CalculadoraRomana-WEB/" target="_blank" rel="noopener noreferrer" class="overlay-link" aria-label="Ver site da Calculadora Romana">
+                                                <i class="fa-solid fa-arrow-up-right-from-square"></i>
+                                            </a>
+                                        </div>
+                                    </div>
+
+                                    <div class="card-body">
+                                        <div class="card-tags">
+                                            <span class="tag">Algoritmos</span>
+                                            <span class="tag">JavaScript</span>
+                                        </div>
+                                        <h3 class="card-title">Calculadora Romana</h3>
+                                        <p class="card-description">
+                                            Conversor e calculadora bidirecional entre algarismos romanos com interface amigável.
+                                        </p>
+                                    </div>
+
+                                    <div class="cta-project">
+                                        <a href="https://github.com/douglasmoura/APS-CalculadoraRomana-WEB" target="_blank" rel="noopener noreferrer" class="btn-card btn-code">
+                                            <i class="fa-brands fa-github"></i> Código
+                                        </a>
+                                        <a href="https://douglasmoura.github.io/APS-CalculadoraRomana-WEB/" target="_blank" rel="noopener noreferrer" class="btn-card btn-live">
+                                            <i class="fa-solid fa-arrow-up-right-from-square"></i> Site
+                                        </a>
+                                    </div>
+                                </article>
+                            </div>
+
+                            <!-- Projeto 3: DS Delivery -->
+                            <div class="swiper-slide">
+                                <article class="card-project">
+                                    <div class="image-project">
+                                        <img src="./img/Delivery.jpg" alt="Screenshot do DS Delivery" loading="lazy">
+                                        <span class="status-tag repo-tag">Repositório</span>
+                                    </div>
+
+                                    <div class="card-body">
+                                        <div class="card-tags">
+                                            <span class="tag">Java Spring</span>
+                                            <span class="tag">React</span>
+                                        </div>
+                                        <h3 class="card-title">DS Delivery</h3>
+                                        <p class="card-description">
+                                            Plataforma completa de delivery com catálogo de produtos, integração com mapas para entrega e pedidos.
+                                        </p>
+                                    </div>
+
+                                    <div class="cta-project">
+                                        <a href="https://github.com/douglasmoura/dsdeliver-sds2" target="_blank" rel="noopener noreferrer" class="btn-card btn-code btn-full">
+                                            <i class="fa-brands fa-github"></i> Ver Código
+                                        </a>
+                                        <a href="https://douglas-studios.netlify.app" target="_blank" rel="noopener noreferrer" class="btn-card btn-live" title="Link de demonstração do projeto">
+                                            <i class="fa-solid fa-arrow-up-right-from-square"></i> Demo
+                                        </a>
+                                    </div>
+                                </article>
+                            </div>
+
+                            <!-- Projeto 4: DS Vendas -->
+                            <div class="swiper-slide">
+                                <article class="card-project">
+                                    <div class="image-project">
+                                        <img src="./img/Vendas.jpg" alt="Screenshot do DS Vendas" loading="lazy">
+                                        <span class="status-tag repo-tag">Repositório</span>
+                                    </div>
+
+                                    <div class="card-body">
+                                        <div class="card-tags">
+                                            <span class="tag">Dashboard</span>
+                                            <span class="tag">React</span>
+                                            <span class="tag">Spring</span>
+                                        </div>
+                                        <h3 class="card-title">DS Vendas</h3>
+                                        <p class="card-description">
+                                            Dashboard analítico com gráficos interativos, taxas de conversão e relatórios de vendas em tempo real.
+                                        </p>
+                                    </div>
+
+                                    <div class="cta-project">
+                                        <a href="https://github.com/douglasmoura/projeto-sds3" target="_blank" rel="noopener noreferrer" class="btn-card btn-code btn-full">
+                                            <i class="fa-brands fa-github"></i> Ver Código
+                                        </a>
+                                        <a href="https://douglasmoura-dsvendas.netlify.app" target="_blank" rel="noopener noreferrer" class="btn-card btn-live" title="Link de demonstração do projeto">
+                                            <i class="fa-solid fa-arrow-up-right-from-square"></i> Demo
+                                        </a>
+                                    </div>
+                                </article>
+                            </div>
+
+                            <!-- Projeto 5: DS Movie -->
+                            <div class="swiper-slide">
+                                <article class="card-project">
+                                    <div class="image-project">
+                                        <img src="./img/Filmes.jpg" alt="Screenshot do DS Movie" loading="lazy">
+                                        <span class="status-tag repo-tag">Repositório</span>
+                                    </div>
+
+                                    <div class="card-body">
+                                        <div class="card-tags">
+                                            <span class="tag">Full Stack</span>
+                                            <span class="tag">React</span>
+                                        </div>
+                                        <h3 class="card-title">DS Movie</h3>
+                                        <p class="card-description">
+                                            Catálogo de filmes interativo com listagem dinâmica, paginação e sistema de notas e avaliações.
+                                        </p>
+                                    </div>
+
+                                    <div class="cta-project">
+                                        <a href="https://github.com/douglasmoura/dsmovie" target="_blank" rel="noopener noreferrer" class="btn-card btn-code btn-full">
+                                            <i class="fa-brands fa-github"></i> Ver Código
+                                        </a>
+                                        <a href="https://dsmovie-douglasmoura.netlify.app" target="_blank" rel="noopener noreferrer" class="btn-card btn-live" title="Link de demonstração do projeto">
+                                            <i class="fa-solid fa-arrow-up-right-from-square"></i> Demo
+                                        </a>
+                                    </div>
+                                </article>
+                            </div>
+
+                        </div>
+
+                        <!-- Swiper Controls -->
+                        <div class="swiper-button-prev" tabindex="0" role="button" aria-label="Slide anterior"></div>
+                        <div class="swiper-button-next" tabindex="0" role="button" aria-label="Próximo slide"></div>
+                        <div class="swiper-pagination"></div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contacts Section -->
+        <section id="contacts" class="contacts-section">
+            <div class="section-container">
+                <div class="section-heading">
+                    <span class="section-badge">Conexão</span>
+                    <h2 class="section-title">Vamos <span class="text-gradient">Conversar?</span></h2>
+                    <p class="section-subtitle">
+                        Sinta-se à vontade para me enviar uma mensagem, tirar dúvidas ou conversar sobre novos projetos e oportunidades.
+                    </p>
+                </div>
+
+                <div class="contacts-cards-grid">
+                    <div class="contact-card">
+                        <div class="contact-icon-bubble">
+                            <i class="fa-solid fa-map-location-dot"></i>
+                        </div>
+                        <div class="contact-card-info">
+                            <span class="contact-label">Localização</span>
+                            <p class="contact-value">Rio de Janeiro, RJ - Brasil</p>
+                        </div>
+                    </div>
+
+                    <a href="mailto:douglasmoura2@outlook.com" class="contact-card contact-card-interactive" aria-label="Enviar e-mail para douglasmoura2@outlook.com">
+                        <div class="contact-icon-bubble">
+                            <i class="fa-solid fa-envelope-open-text"></i>
+                        </div>
+                        <div class="contact-card-info">
+                            <span class="contact-label">E-mail</span>
+                            <span class="contact-value email-text">douglasmoura2@outlook.com</span>
+                        </div>
+                        <i class="fa-solid fa-arrow-up-right-from-square contact-card-arrow"></i>
+                    </a>
+
+                    <a href="https://www.linkedin.com/in/douglasmourarj/" target="_blank" rel="noopener noreferrer" class="contact-card contact-card-interactive" aria-label="Abrir perfil no LinkedIn">
+                        <div class="contact-icon-bubble">
+                            <i class="fa-brands fa-linkedin-in"></i>
+                        </div>
+                        <div class="contact-card-info">
+                            <span class="contact-label">LinkedIn</span>
+                            <span class="contact-value">/in/douglasmourarj</span>
+                        </div>
+                        <i class="fa-solid fa-arrow-up-right-from-square contact-card-arrow"></i>
+                    </a>
+
+                    <a href="https://github.com/douglasmoura" target="_blank" rel="noopener noreferrer" class="contact-card contact-card-interactive" aria-label="Abrir perfil no GitHub">
+                        <div class="contact-icon-bubble">
+                            <i class="fa-brands fa-github"></i>
+                        </div>
+                        <div class="contact-card-info">
+                            <span class="contact-label">GitHub</span>
+                            <span class="contact-value">@douglasmoura</span>
+                        </div>
+                        <i class="fa-solid fa-arrow-up-right-from-square contact-card-arrow"></i>
+                    </a>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer" id="footer">
+        <div class="container-footer">
+            <p class="footer-text">
+                Desenvolvido com <i class="fa-solid fa-heart footer-heart" aria-hidden="true"></i> por <strong>Douglas Moura</strong>
+            </p>
+            <p class="footer-copyright">
+                &copy; <span id="current-year">2026</span> douglasmoura.dev &bull; Todos os direitos reservados.
+            </p>
+        </div>
+    </footer>
+
+    <!-- Botão Flutuante Voltar ao Topo -->
+    <a href="#person" class="back-to-top" id="back-to-top" aria-label="Voltar ao início">
+        <i class="fa-solid fa-arrow-up"></i>
+    </a>
+
+    <!-- Swiper JS (v11 sincronizado com CSS v11) -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+
+    <!-- Script Customizado -->
+    <script src="script.js"></script>
+</body>
+</html>
